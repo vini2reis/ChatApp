@@ -3,11 +3,10 @@ from django.db import models
 class Message(models.Model):
     user_id = models.CharField(
       max_length=10, 
-      choices=[('user_a', 'Usuário A'), ('user_b', 'Usuário B')],
-      verbose_name="ID do Usuário"
+      choices=[('user_a', 'user_a'), ('user_b', 'user_b')]
     )
-    message = models.TextField(verbose_name="Mensagem do Usuário")
-    response = models.TextField(verbose_name="Resposta do Bot")
+    message = models.TextField()
+    response = models.TextField()
     sent_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
