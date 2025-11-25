@@ -1,5 +1,3 @@
-// src/components/ConversationArea.jsx
-
 import React from 'react';
 import MessageItem from './MessageItem.jsx';
 
