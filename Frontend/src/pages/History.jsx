@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Header from '../components/Header.jsx'
-import MessageItem from '../components/MessageItem.jsx'
+import Conversation from '../components/Conversation.jsx'
 import { useUser } from '../contexts/UserContext.jsx'
 import { getHistory } from '../hooks/chatApi.js'
 
@@ -32,7 +32,7 @@ export default function HistoryScreen() {
   }, [currentUser])
 
   return (
-    <div className='history-container'>
+    <div className='container'>
       <Header />
       <h2>Conversa - {currentUser.toUpperCase()}</h2>
       
@@ -42,16 +42,7 @@ export default function HistoryScreen() {
         <p>Nenhuma mensagem encontrada para {currentUser}.</p>
       )}
 
-      <div className='conversation'>
-        {history.map((msg, index) => (
-            <MessageItem
-              key={index}
-              sender={msg.sender}
-              message={msg.message}
-              timestamp={msg.sent_at}
-            />
-        ))}
-      </div>
+      <Conversation messages={history} />
     </div>
   )
 }

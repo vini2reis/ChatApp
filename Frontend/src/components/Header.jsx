@@ -11,7 +11,7 @@ export default function Header() {
     switchUser(nextUser)
     
     if (window.location.pathname.startsWith('/history')) {
-        navigate(`/history/${nextUser}`)
+      navigate(`/history/${nextUser}`)
     }
   }
 
@@ -25,7 +25,7 @@ export default function Header() {
       <div className='user-control'>
         <span style={{ marginRight: '10px' }}>Usuário Ativo: <strong>{currentUser}</strong></span>
         
-        <button onClick={handleSwitchUser}>
+        <button className='switch-button' onClick={handleSwitchUser}>
           Trocar para {nextUser.toUpperCase()}
         </button>
       </div>

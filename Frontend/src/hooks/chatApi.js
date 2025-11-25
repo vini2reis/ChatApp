@@ -3,6 +3,8 @@ import { api } from '../api.js'
 export async function sendMessage (user_id, message) {
   const response = await api.post('chat/', { user_id, message })
 
+  console.log(response.data)
+
   return response.data
 }
 
