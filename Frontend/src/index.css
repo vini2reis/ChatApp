@@ -1,68 +1,106 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  padding: 20px;
+}
+
+/* Header */
+
+.header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+}
+
+.routes a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+  margin-right: '15px',
+}
+
+.user-control {
+  display: 'flex';
+  align-items: 'center',
+}
+
+/* Message Item */
+
+.message-bubble {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-user {
+  align-self: flex-end;
+  background-color: #dcf8c6; 
+}
+
+.message-bot {
+  align-self: flex-start;
+  background-color: #fff;
+}
+
+.sender-name {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.sender-user {
+  color: #1e90ff; 
+}
+
+.sender-bot {
+  color: #00a86b; 
+}
+
+.message-timestamp {
+  display: block;
+  font-size: 0.65em;
+  color: #888;
+  margin-top: 5px;
+}
+
+.time-user {
+  text-align: right; 
+}
+
+.time-bot {
+  text-align: left; 
+}
+
+/* History */
+
+.history-container {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h2 {
+  padding: 0 15px;
+  color: #007bff;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.conversation {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
