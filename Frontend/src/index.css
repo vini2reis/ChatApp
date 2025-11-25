@@ -6,7 +6,7 @@
 
 body {
   font-family: Inter, system-ui, Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #efdbf4;
   color: #222;
   padding: 20px;
 }
@@ -23,17 +23,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background-color: #333;
-  color: white;
+  padding: 0 15px;
+  background-color: #2f0870;
+  height: 80px;
+  color: #e5e7eb;
+  font-size: 18px;
+}
+
+.routes {
+  display: flex;
+  height: 80%;
 }
 
 .routes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 18px;
   color: #e5e7eb;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.2s;
-  margin-right: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+
+.routes a:hover {
+  background-color: #e5e7eb;
+  color: #2f0870;
 }
 
 .user-control {
@@ -42,14 +59,19 @@ body {
 }
 
 .switch-button {
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 15px;
+  background-color: #c93dbd;
+  color: #e5e7eb;
   border: none;
-  transition: 0.2s;
-  background-color: white;
-  color: black;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: background-color 0.2s;
+  font-size: 18px;
+}
+
+.user-control button:hover {
+  background-color: #591ece;
 }
 
 /* Message Item */
@@ -57,21 +79,23 @@ body {
 .message-bubble {
   max-width: 60%;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 35px;
   margin: 10px;
-  border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
+  color: #e5e7eb;
 }
 
 .message-user {
   align-self: flex-end;
-  background-color: #dcf8c6; 
+  background-color: #591ece;
+  border: 1px solid #591ece;
 }
 
 .message-bot {
   align-self: flex-start;
-  background-color: #fff;
+  background-color: #c93dbd;
+  border: 1px solid #c93dbd;
 }
 
 .sender-name {
@@ -81,18 +105,20 @@ body {
 }
 
 .sender-user {
-  color: #1e90ff; 
+  color: #e79bdc;
 }
 
 .sender-bot {
-  color: #00a86b; 
+  color: #2f0870; 
 }
 
 .message-timestamp {
   display: block;
   font-size: 0.65em;
-  color: #888;
+  color: #d4b5d9;
   margin-top: 5px;
+  font-weight: bold;
+  padding: 2px;
 }
 
 .time-user {
@@ -107,7 +133,8 @@ body {
 
 h2 {
   padding: 0 15px;
-  color: #007bff;
+  color: #591ece;
+  margin-top: 20px;
 }
 
 .conversation {
@@ -122,7 +149,7 @@ h2 {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
+  border: 1px solid #2f0870;
 }
 
 .chat-conversation {
@@ -136,30 +163,39 @@ h2 {
 .chat-form {
   display: flex;
   padding: 10px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #2f0870;
 }
 
 .message-bar {
   flex-grow: 1;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 2px solid #2f0870;
   border-radius: 5px;
   margin-right: 10px;
   font-size: 20px;
+  background-color: #efdbf4;
+  color: #2f0870;
 }
 
 .send-button {
   padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: #2f0870;
+  color: #e5e7eb;
+  border: 2px solid #2f0870;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-weight: bold;
+}
+
+.send-button:hover {
+  background-color: #e5e7eb;
+  color: #2f0870;
 }
 
 .send-button:disabled {
   background-color: #cccccc;
   color: #666666;
+  border: 2px solid #cccccc;
   cursor: not-allowed;
 }

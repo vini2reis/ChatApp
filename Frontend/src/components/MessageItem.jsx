@@ -7,12 +7,17 @@ export default function MessageItem ({ sender, message, timestamp }) {
   const senderClass = isUser ? 'sender-user' : 'sender-bot'
   const timeClass = isUser ? 'time-user' : 'time-bot'
 
+  const timeOptions = { 
+    hour: '2-digit', 
+    minute: '2-digit',
+  }
+
   return (
     <div className={`message-bubble ${messageClass}`}>
       <span className={`sender-name ${senderClass}`}>{sender}</span>
       <div>{message}</div>
       <span className={`message-timestamp ${timeClass}`}>
-        {new Date(timestamp).toLocaleTimeString()}
+        {new Date(timestamp).toLocaleTimeString([], timeOptions)}
       </span>
     </div>
   )
